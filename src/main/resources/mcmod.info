@@ -1,16 +1,16 @@
 [
 {
-  "modid": "Thumic Storage",
+  "modid": "thaumicstorage",
   "name": "Thaumic Storage",
-  "description": "A mod that adds Refined Storage and Thaumcraft intragration.",
-  "version": "${1.12.2}",
+  "description": "",
+  "version": "alpha 1",
   "mcversion": "${1.12.2}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["Mcintosh109"],
-  "credits": "The Forge and FML guys, Thaumcrft and Refined Storage authors, for making this mod possable",
+  "authorList": [McIntosh109],
+  "credits": "The Forge and FML guys, for making this example",
   "logoFile": "",
   "screenshots": [],
-  "dependencies": []
+  "dependencies": [thaumcraft, Refined Storage]
 }
 ]
