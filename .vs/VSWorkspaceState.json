@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\API",
+    "\\src\\API\\java",
+    "\\src\\API\\java\\thaumicstorage",
+    "\\src\\API\\java\\thaumicstorage\\api",
+    "\\src\\API\\java\\thaumicstorage\\api\\Util"
+  ],
+  "SelectedNode": "\\src\\API\\java\\thaumicstorage\\api\\Util\\EssentiaStack.java",
+  "PreviewInSolutionExplorer": false
+}
