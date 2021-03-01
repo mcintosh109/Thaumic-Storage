@@ -16,25 +16,23 @@ import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-import thaumicenergistics.api.storage.IAEEssentiaStack;
-import thaumicenergistics.client.render.IThEModel;
-import thaumicenergistics.tile.TileInfusionProvider;
+import thaumicstorage.api.storage.IAEEssentiaStack;
+import thaumicstorage.client.render.IThEModel;
+import thaumicstorage.tile.TileInfusionProvider;
 
-/**
- * @author BrockWS
- */
-public class BlockInfusionProvider extends BlockNetwork implements IThEModel {
 
-    public BlockInfusionProvider(String id) {
-        super(id);
+
+Public class InterfaceBlock extends NetworkNodeBlock {
+    public InterfaceBlock() {
+        super(BlockUtils.DEFAULT_ROCK_PROPERTIES);
+
+        this.setRegistryName(RS.ID, "Essintia interface");
     }
-
+    @Nullable
     @Override
-    public void registerTileEntity() {
-        super.registerTileEntity();
-        GameRegistry.registerTileEntity(TileInfusionProvider.class, this.getRegistryName());
+    public TileEntity createTileEntity(BlockState state, IBlockReader world) {
+        return new InterfaceTile();
     }
-
     @Override
     public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         if (world.isRemote || hand != EnumHand.MAIN_HAND)
@@ -51,21 +49,4 @@ public class BlockInfusionProvider extends BlockNetwork implements IThEModel {
                     player.sendMessage(new TextComponentString("No aspects found"));
                 }
             }
-            // FIXME: Make sure it updates itself, can be removed if TileInfusionProvider monitors the me network for changes
-            te.markDirty();
-            return true;
-        }
-        return false;
     }
-
-    @Nullable
-    @Override
-    public TileEntity createNewTileEntity(World worldIn, int meta) {
-        return new TileInfusionProvider();
-    }
-
-    @Override
-    public void initModel() {
-        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), 0, new ModelResourceLocation(getRegistryName(), "inventory"));
-    }
-}

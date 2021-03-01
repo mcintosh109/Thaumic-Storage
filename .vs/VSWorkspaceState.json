@@ -6,8 +6,13 @@
     "\\src\\API\\java",
     "\\src\\API\\java\\thaumicstorage",
     "\\src\\API\\java\\thaumicstorage\\api",
-    "\\src\\API\\java\\thaumicstorage\\api\\Util"
+    "\\src\\main",
+    "\\src\\main\\java",
+    "\\src\\main\\java\\thaumicstorage",
+    "\\src\\main\\java\\thaumicstorage\\block",
+    "\\src\\main\\resources",
+    "\\src\\main\\resources\\assets"
   ],
-  "SelectedNode": "\\src\\API\\java\\thaumicstorage\\api\\Util\\EssentiaStack.java",
+  "SelectedNode": "\\src\\main\\java\\thaumicstorage\\block\\BlockInfusionInterface.java",
   "PreviewInSolutionExplorer": false
 }
